@@ -1,0 +1,86 @@
+import { ActivityCodeType } from '@Utility/enum';
+
+const ActivityTemplateConfig = [
+	{
+		name: 'Pre Assessment',
+		cardImage: '/activities/Big/1.png',
+		faIcon: '/activities/small/1.png',
+		isRepeted: false,
+		role: 1,
+		code: ActivityCodeType.Pre,
+	},
+	{
+		name: 'Documents / Slides',
+		cardImage: '/activities/Big/2.png',
+		faIcon: '/activities/small/2.png',
+		isRepeted: true,
+		role: 1,
+		code: ActivityCodeType.Pdf,
+	},
+	{
+		name: 'Videos',
+		cardImage: '/activities/Big/3.png',
+		faIcon: '/activities/small/3.png',
+		role: 2,
+		isRepeted: true,
+		code: ActivityCodeType.Video,
+	},
+	{
+		name: 'Conceptual Videos',
+		cardImage: '/activities/Big/9.png',
+		faIcon: '/activities/small/9.svg',
+		role: 1,
+		isRepeted: true,
+		code: ActivityCodeType.ConceptualVideo,
+	},
+	{
+		name: 'Youtube Videos',
+		cardImage: '/activities/Big/4.png',
+		faIcon: '/activities/small/4.png',
+		role: 1,
+		isRepeted: true,
+		code: ActivityCodeType.Youtube,
+	},
+	{
+		name: 'Web Links',
+		cardImage: '/activities/Big/5.png',
+		faIcon: '/activities/small/5.png',
+		role: 1,
+		isRepeted: true,
+		code: ActivityCodeType.Web,
+	},
+	{
+		name: 'Games / Simulations',
+		cardImage: '/activities/Big/6.png',
+		faIcon: '/activities/small/6.png',
+		role: 1,
+		isRepeted: true,
+		code: ActivityCodeType.Game,
+	},
+	{
+		name: 'HTML 5',
+		cardImage: '/activities/Big/7.png',
+		faIcon: '/activities/small/7.png',
+		role: 1,
+		isRepeted: true,
+		code: ActivityCodeType.Html5,
+	},
+	{
+		name: 'Objective Assessment',
+		cardImage: '/activities/Big/8.png',
+		faIcon: '/activities/small/8.png',
+		role: 1,
+		isRepeted: true,
+		code: ActivityCodeType.Obj,
+	},
+	{
+		name: 'Post Assessment',
+		cardImage: '/activities/Big/8.png',
+		faIcon: '/activities/small/8.png',
+		role: 1,
+		isRepeted: false,
+		code: ActivityCodeType.Post,
+	},
+];
+
+export { ActivityTemplateConfig };

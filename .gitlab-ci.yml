@@ -1,0 +1,90 @@
+image: node:latest
+
+# # placed here for quick Access, will be moved to gitlab env values
+# variables:
+#   DOCKER_REGISTRY_TEST:
+#   DOCKER_REGISTRY_PROD:
+#   APP_NAME: api
+#   TAG: '$CI_COMMIT_SHORT_SHA-$CI_PIPELINE_ID'
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - build
+#   - staging
+#   - deployment
+
+build:
+  stage: build
+  script:
+    - npm install
+    - npm run build
+
+# # test-stage:
+# #   stage: test-stage
+# #   only:
+# #     - main
+# #   script:
+# #     - echo "started building docker image"
+# #     - docker info
+# #     - docker build -t $DOCKER_REGISTRY_TEST/$APP_NAME:"$TAG"
+
+# staging:
+#   only:
+#     - master
+#   image:
+#     name: amazon/aws-cli
+#     entrypoint: [""]
+#   services:
+#     - docker:dind
+#   before_script:
+#     - amazon-linux-extras install docker
+#     - aws --version
+#     - docker --version
+#     - docker info
+#   script:
+#     - echo "Building $APP_NAME docker Image..."
+#     - docker build -t $DOCKER_REGISTRY_TEST/$APP_NAME:$TAG
+#     - echo "Successfully built $APP_NAME Image.."
+#     - aws ecr get-login-password | docker login --username AWS --password-stdin $DOCKER_REGISTRY_TEST
+#     - docker tag $DOCKER_REGISTRY_TEST/$APP_NAME:$TAG $DOCKER_REGISTRY_TEST/$APP_NAME:$TAG
+#     - echo "pushing $APP_NAME Images to ECR Registry:DOCKER_REGISTRY_TEST"
+#     - docker push $DOCKER_REGISTRY_TEST/$APP_NAME:$TAG
+
+# deployment:
+#   only:
+#     - production
+#   image:
+#     name: amazon/aws-cli
+#     entrypoint: [""]
+#   services:
+#     - docker:dind
+#   before_script:
+#     - amazon-linux-extras install docker
+#     - aws --version
+#     - docker --version
+#     - docker info
+#   script:
+#     - echo "Building $APP_NAME docker Image..."
+#     - docker build -t $DOCKER_REGISTRY_PROD/$APP_NAME:$TAG
+#     - echo "Successfully built $APP_NAME Image.."
+#     - aws ecr get-login-password | docker login --username AWS --password-stdin $DOCKER_REGISTRY_PROD
+#     - docker tag $DOCKER_REGISTRY_PROD/$APP_NAME:$TAG $DOCKER_REGISTRY_PROD/$APP_NAME:$TAG
+#     - echo "pushing $APP_NAME Images to ECR Registry:DOCKER_REGISTRY_PROD"
+#     - docker push $DOCKER_REGISTRY_PROD/$APP_NAME:$TAG
+
+
+# # push-docker-image:
+# #   stage: push-docker-image
+# #   only:
+# #     - main
+# #   image:
+# #     name: $DOCKER_REGISTRY_TEST/$APP_NAME:"$TAG"
+# #   services:
+# #     - docker:dind
+# #   script:
+# #     - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin $DOCKER_REGISTRY_TEST
+# #     - docker tag $DOCKER_REGISTRY_TEST/$APP_NAME:"$TAG" $DOCKER_REGISTRY_TEST/$APP_NAME:"$TAG"
+# #     - docker push $DOCKER_REGISTRY_TEST/$APP_NAME:"$TAG"

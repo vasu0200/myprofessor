@@ -1,0 +1,103 @@
+{
+	"name": "my-professor-admin-service",
+	"version": "1.0.0",
+	"description": "My Moleculer-based microservices project",
+	"scripts": {
+		"build": "tsc --build tsconfig.json",
+		"dev": "ts-node -r tsconfig-paths/register ./node_modules/moleculer/bin/moleculer-runner.js --env --hot --repl --config moleculer.config.ts services/**/*.service.ts",
+		"start": "ts-node -r tsconfig-paths/register ./node_modules/moleculer/bin/moleculer-runner.js --config dist/moleculer.config.js dist/services",
+		"cli": "moleculer connect ",
+		"ci": "jest --watch",
+		"test": "jest --coverage",
+		"lint": "eslint --ext .js,.ts .",
+		"dc:up": "docker-compose up --build -d",
+		"dc:logs": "docker-compose logs -f",
+		"dc:down": "docker-compose down"
+	},
+	"keywords": [
+		"microservices",
+		"moleculer"
+	],
+	"author": "",
+	"devDependencies": {
+		"@types/adm-zip": "^0.5.0",
+		"@types/async": "^3.2.15",
+		"@types/bcrypt": "^5.0.0",
+		"@types/jest": "^27.0.0",
+		"@types/json2csv": "^5.0.3",
+		"@types/mime-types": "^2.1.1",
+		"@types/node": "^13.13.52",
+		"@types/node-cron": "^3.0.1",
+		"@typescript-eslint/eslint-plugin": "5.46.1",
+		"@typescript-eslint/parser": "5.46.1",
+		"eslint": "8.29.0",
+		"eslint-config-prettier": "8.5.0",
+		"eslint-plugin-import": "^2.25.2",
+		"eslint-plugin-prefer-arrow": "^1.2.2",
+		"eslint-plugin-prettier": "4.2.1",
+		"jest": "27.5.1",
+		"jest-cli": "^27.3.1",
+		"moleculer-repl": "^0.7.0",
+		"ts-jest": "^27.0.0",
+		"ts-node": "10.9.1",
+		"typeorm-encrypted": "0.8.0"
+	},
+	"dependencies": {
+		"@sendgrid/mail": "^7.6.2",
+		"@types/mkdirp": "^1.0.0",
+		"@types/mocha": "^9.0.0",
+		"adm-zip": "^0.5.9",
+		"async": "^3.2.2",
+		"aws-sdk": "^2.1022.0",
+		"axios": "^0.26.0",
+		"bcrypt": "^5.1.0",
+		"bigbluebutton-js": "^0.2.0",
+		"class-transformer": "^0.4.0",
+		"fcm-node": "^1.6.1",
+		"firebase-admin": "^11.9.0",
+		"googleapis": "^95.0.0",
+		"json2csv": "^5.0.7",
+		"jsonwebtoken": "^8.5.1",
+		"log4js": "^6.4.1",
+		"mime-lookup": "0.0.2",
+		"moleculer": "^0.14.18",
+		"moleculer-db": "^0.8.16",
+		"moleculer-db-adapter-mongo": "^0.4.14",
+		"moleculer-decorators": "~1.0.21",
+		"moleculer-web": "^0.9.0",
+		"moment": "^2.29.1",
+		"mysql": "^2.18.1",
+		"node-cron": "^3.0.1",
+		"query-string": "^7.1.1",
+		"randomstring": "^1.2.2",
+		"razorpay": "^2.8.0",
+		"reflect-metadata": "^0.1.13",
+		"swagger-ui-dist": "^4.5.2",
+		"typeorm": "0.3.11",
+		"typescript": "4.7.4",
+		"uuidv1": "^1.6.14"
+	},
+	"engines": {
+		"node": ">= 10.x.x"
+	},
+	"jest": {
+		"coverageDirectory": "<rootDir>/coverage",
+		"testEnvironment": "node",
+		"moduleFileExtensions": [
+			"ts",
+			"tsx",
+			"js"
+		],
+		"transform": {
+			"^.+\\.(ts|tsx)$": "ts-jest"
+		},
+		"testMatch": [
+			"**/*.spec.(ts|js)"
+		],
+		"globals": {
+			"ts-jest": {
+				"tsConfig": "tsconfig.json"
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"git.confirmSync": false,
+	"git.autofetch": true,
+	"editor.tabSize": 2,
+	"editor.formatOnSave": false,
+	"editor.formatOnPaste": false,
+	"editor.formatOnType": false,
+	"files.autoSave": "off",
+	"tslint.alwaysShowRuleFailuresAsWarnings": true,
+	"tslint.alwaysShowStatus": true,
+	"tslint.autoFixOnSave": true,
+	"tslint.run": "onSave",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"files.trimTrailingWhitespace": true,
+	"workbench.editor.enablePreview": false,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"extensions.ignoreRecommendations": false,
+	"workbench.startupEditor": "newUntitledFile",
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"todo-tree.tree.showScanModeButton": false,
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"files.refactoring.autoSave": false
+}

@@ -1,0 +1,33 @@
+{
+	"compilerOptions": {
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"esModuleInterop": true,
+		"noImplicitAny": false,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"resolveJsonModule":true,
+		"strict": true,
+		"module": "commonjs",
+		"pretty": true,
+		"types": ["node"],
+		"outDir": "dist",
+		"sourceMap": true,
+		"target": "es2017",
+		"allowJs": true,
+		"baseUrl": ".",
+		"paths": {
+			"@Models/*": ["src/model/*"],
+			"@Models": ["src/model"],
+			"@Dao/*": ["src/dao/*"],
+			"@Dao": ["src/dao"],
+			"@Helpers/*": ["src/helpers/*"],
+			"@Helpers": ["src/helpers"],
+			"@Utility/*": ["src/utility/*"],
+			"@Utility": ["src/utility"]
+		}
+	},
+	"exclude": ["node_modules"],
+	// TODO: include unit test framework
+	"include": ["./src/**/*.ts", "./services/**/*.ts", "./moleculer.config.ts", "./app-config.json","./swagger/**/*"]
+}

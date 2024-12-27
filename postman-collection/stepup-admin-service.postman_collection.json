@@ -1,0 +1,1553 @@
+{
+	"info": {
+		"_postman_id": "a17f7b3e-4121-4618-b8e5-27e1ce0f9436",
+		"name": "my-professor-api-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Universal Subjects",
+			"item": [
+				{
+					"name": "createSubject",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"sample subject aftsser s31a1\",\r\n    \"description\":\"asdsaasdsadasdasdasdsdd\",\r\n    \"image\":\"data:image/jpeg;base64,/<addBase64Here>\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/universal-library/subjects",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"universal-library",
+								"subjects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSubjects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiEnvPath}}/universal-library/subjects",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"universal-library",
+								"subjects"
+							],
+							"query": [
+								{
+									"key": "searchValue",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchSubjects",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"searchValue\":\"22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/universal-library/subjects/search",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"universal-library",
+								"subjects",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateSubject",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"sample subject update afterqqq dto\",\r\n    \"description\":\"asdsaasdsadasdasdasdsdd\",\r\n    \"image\":\"https://smartsandbox.s3.ap-south-1.amazonaws.com/asdasd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/universal-library/subjects/:subjectId",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"universal-library",
+								"subjects",
+								":subjectId"
+							],
+							"variable": [
+								{
+									"key": "subjectId",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteSubjects",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/universal-library/subjects/:subjectId",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"universal-library",
+								"subjects",
+								":subjectId"
+							],
+							"variable": [
+								{
+									"key": "subjectId",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Universal Topics",
+			"item": [
+				{
+					"name": "createTopic",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"sample topic afteaar s3\",\r\n    \"description\":\"sample topic sample topic smaple topics\",\r\n    \"code\":\"SAMPLE-TOPIC\",\r\n    \"image\":\"data:image/jpeg;base64,/<addBase64Here>\",\r\n    \"fileName\":\"topifle\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/universal-library/subjects/:subjectId/topics",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"universal-library",
+								"subjects",
+								":subjectId",
+								"topics"
+							],
+							"variable": [
+								{
+									"key": "subjectId",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTopics",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/universal-library/subjects/:subjectId/topics",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"universal-library",
+								"subjects",
+								":subjectId",
+								"topics"
+							],
+							"query": [
+								{
+									"key": "searchValue",
+									"value": "sample topic111",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "subjectId",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchTopics",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"searchValue\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/universal-library/subjects/:subjectId/topics/search",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"universal-library",
+								"subjects",
+								":subjectId",
+								"topics",
+								"search"
+							],
+							"variable": [
+								{
+									"key": "subjectId",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateTopic",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"sample topicq\",\r\n    \"description\":\"sample toaapic sample topic smaple topics\",\r\n    \"code\":\"SAMPLE-TOPIC\",\r\n    \"image\":\"https://smartsandbox.s3.ap-south-1.amazonaws.com/topifle\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/universal-library/subjects/:subjectId/topics/:topicId",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"universal-library",
+								"subjects",
+								":subjectId",
+								"topics",
+								":topicId"
+							],
+							"variable": [
+								{
+									"key": "subjectId",
+									"value": "9"
+								},
+								{
+									"key": "topicId",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletetopic",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/universal-library/subjects/:subjectId/topics/:topicId",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"universal-library",
+								"subjects",
+								":subjectId",
+								"topics",
+								":topicId"
+							],
+							"variable": [
+								{
+									"key": "subjectId",
+									"value": "5"
+								},
+								{
+									"key": "topicId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Activities",
+			"item": [
+				{
+					"name": "getActivities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiEnvPath}}/activities",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"activities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "assignActivities",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"activities\": [\r\n        {\r\n            \"id\": 17,\r\n            \"seq\": 1,\r\n            \"activityId\": 101\r\n        },\r\n        {\r\n            \"id\": 18,\r\n            \"seq\": 2,\r\n            \"activityId\": 102\r\n        },\r\n        {\r\n            \"id\": 19,\r\n            \"seq\": 3,\r\n            \"activityId\": 103\r\n        },\r\n        {\r\n            \"id\": -1,\r\n            \"seq\": 4,\r\n            \"activityId\": 103\r\n        },\r\n        {\r\n            \"id\": -1,\r\n            \"seq\": 5,\r\n            \"activityId\": 103\r\n        },\r\n        {\r\n            \"id\": -1,\r\n            \"seq\": 6,\r\n            \"activityId\": 103\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/topics/:topicId/activities",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"topics",
+								":topicId",
+								"activities"
+							],
+							"variable": [
+								{
+									"key": "topicId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAssignedActivities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiEnvPath}}/topics/:topicId/activities",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"topics",
+								":topicId",
+								"activities"
+							],
+							"variable": [
+								{
+									"key": "topicId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAssignedActivity",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"updated Nam1e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/topics/:topicId/activities/:assignedActivityId",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"topics",
+								":topicId",
+								"activities",
+								":assignedActivityId"
+							],
+							"variable": [
+								{
+									"key": "topicId",
+									"value": "1"
+								},
+								{
+									"key": "assignedActivityId",
+									"value": "22"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAssignedActivity",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/topics/:topicId/activities/:assignedActivityId",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"topics",
+								":topicId",
+								"activities",
+								":assignedActivityId"
+							],
+							"variable": [
+								{
+									"key": "topicId",
+									"value": null
+								},
+								{
+									"key": "assignedActivityId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addActivityInfo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fileData\":\"data:image/jpeg;base64,/<addBase64Here>\",\r\n    \"duration\":10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/activities/:assignedActivityId/activity-info",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"activities",
+								":assignedActivityId",
+								"activity-info"
+							],
+							"variable": [
+								{
+									"key": "assignedActivityId",
+									"value": "17"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getActivityInfo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/activities/:assignedActivityId/activity-info/:activityInfoId",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"activities",
+								":assignedActivityId",
+								"activity-info",
+								":activityInfoId"
+							],
+							"variable": [
+								{
+									"key": "assignedActivityId",
+									"value": "17"
+								},
+								{
+									"key": "activityInfoId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateActivityInfo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fileData\":\"data:image/jpeg;base64,/<add Base64String>\",\r\n    \"duration\":20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/activities/:assignedActivityId/activity-info/:activityInfoId",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"activities",
+								":assignedActivityId",
+								"activity-info",
+								":activityInfoId"
+							],
+							"variable": [
+								{
+									"key": "assignedActivityId",
+									"value": "17"
+								},
+								{
+									"key": "activityInfoId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addQuestion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": \"sample questiasdasdasdasdasdason\",\r\n    \"solution\": \"A\",\r\n    \"explanation\": \"This is samasdasdasdasdple Explanation\",\r\n    \"marks\": 1,\r\n    \"diffLevel\": \"easy\",\r\n    \"questionType\": \"remember\",\r\n    \"options\": [\r\n        {\r\n            \"key\": \"A\",\r\n            \"value\": \"Value1\"\r\n        },\r\n        {\r\n            \"key\": \"B\",\r\n            \"value\": \"Value2\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/activities/:assignedActivityId/questions",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"activities",
+								":assignedActivityId",
+								"questions"
+							],
+							"variable": [
+								{
+									"key": "assignedActivityId",
+									"value": "22"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOptionsByquestionId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": \"sample question after update\",\r\n    \"solution\": \"A\",\r\n    \"explanation\": \"This is sample Explanation after update\",\r\n    \"marks\": 1,\r\n    \"diffLevel\": \"easy\",\r\n    \"questionType\": \"remember\",\r\n    \"options\": [\r\n        {   \"id\":27,\r\n            \"key\": \"A\",\r\n            \"value\": \"Value1\"\r\n        },\r\n        {   \"id\":28,\r\n            \"key\": \"B\",\r\n            \"value\": \"Value2\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/activities/:assignedActivityId/questions/:questionId/options",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"activities",
+								":assignedActivityId",
+								"questions",
+								":questionId",
+								"options"
+							],
+							"variable": [
+								{
+									"key": "assignedActivityId",
+									"value": "22"
+								},
+								{
+									"key": "questionId",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateQuestion",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": \"sample questionasdasdasdasdasd after update\",\r\n    \"solution\": \"A\",\r\n    \"explanation\": \"This is sample Explanation after update\",\r\n    \"marks\": 1,\r\n    \"diffLevel\": \"easy\",\r\n    \"questionType\": \"remember\",\r\n    \"options\": [\r\n        {\r\n            \"id\": 39,\r\n            \"key\": \"A\",\r\n            \"value\": \"Value3asdasd\"\r\n        },\r\n        {\r\n            \"id\": 40,\r\n            \"key\": \"B\",\r\n            \"value\": \"Valueasdsa4\"\r\n        },\r\n        {\r\n            \"id\": 41,\r\n            \"key\": \"C\",\r\n            \"value\": \"asdasdValueasdasdsad\"\r\n        },\r\n        {\r\n            \"id\": 42,\r\n            \"key\": \"D\",\r\n            \"value\": \"asdsadValueasasdsaddsa4\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/activities/:assignedActivityId/questions/:questionId",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"activities",
+								":assignedActivityId",
+								"questions",
+								":questionId"
+							],
+							"variable": [
+								{
+									"key": "assignedActivityId",
+									"value": "22"
+								},
+								{
+									"key": "questionId",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteQuestion",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": \"sample question after update\",\r\n    \"solution\": \"A\",\r\n    \"explanation\": \"This is sample Explanation after update\",\r\n    \"marks\": 1,\r\n    \"diffLevel\": \"easy\",\r\n    \"questionType\": \"remember\",\r\n    \"options\": [\r\n        {   \"id\":27,\r\n            \"key\": \"A\",\r\n            \"value\": \"Value1\"\r\n        },\r\n        {   \"id\":28,\r\n            \"key\": \"B\",\r\n            \"value\": \"Value2\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/activities/:assignedActivityId/questions/:questionId",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"activities",
+								":assignedActivityId",
+								"questions",
+								":questionId"
+							],
+							"variable": [
+								{
+									"key": "assignedActivityId",
+									"value": "22"
+								},
+								{
+									"key": "questionId",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getQuestions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/activities/:assignedActivityId/questions",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"activities",
+								":assignedActivityId",
+								"questions"
+							],
+							"variable": [
+								{
+									"key": "assignedActivityId",
+									"value": "22"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteOption",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/activities/:assignedActivityId/questions/:questionId/options/:optionId",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"activities",
+								":assignedActivityId",
+								"questions",
+								":questionId",
+								"options",
+								":optionId"
+							],
+							"variable": [
+								{
+									"key": "assignedActivityId",
+									"value": "22"
+								},
+								{
+									"key": "questionId",
+									"value": "11"
+								},
+								{
+									"key": "optionId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Internal",
+			"item": [
+				{
+					"name": "injectActivityData",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/internal/inject/activity",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"internal",
+								"inject",
+								"activity"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "S3",
+			"item": [
+				{
+					"name": "upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fileData\": \"<Add base64 string>\",\r\n    \"fileName\": \"sample.pdf\",\r\n    \"viewableInline\": true,\r\n    \"contentType\": \"application/pdf\",\r\n    \"bucketName\": \"smartsandbox\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/s3/upload",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"s3",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bucketName\": \"smartsandbox\",\r\n    \"s3Url\":\"https://smartsandbox.s3.ap-south-1.amazonaws.com/sample.pdf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/s3/delete",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"s3",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSignedUrl",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bucketName\": \"smartsandbox\",\r\n    \"s3Url\": \"https://smartsandbox.s3.ap-south-1.amazonaws.com/sample.pdf\",\r\n    \"expiryInSec\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/s3/signed-url",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"s3",
+								"signed-url"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Question Paper Types",
+			"item": [
+				{
+					"name": "getQuesPaperTypes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiEnvPath}}/questionpaper/types",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"questionpaper",
+								"types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getQuesPaperType",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiEnvPath}}/questionpapers/type/:id",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"questionpapers",
+								"type",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addQuesPaperType",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 10,\r\n    \"title\": \"abc100\",\r\n    \"active\": 1,\r\n    \"ismocktest\": 0,\r\n    \"image\": \"\",\r\n    \"status\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/questionpaper/types",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"questionpaper",
+								"types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateQuesPaperType",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"patch99\",\r\n    \"active\": 1,\r\n    \"ismocktest\": 0,\r\n    \"image\": \"\",\r\n    \"status\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/questionpaper/types/:id",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"questionpaper",
+								"types",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delQuesPaperType",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{apiEnvPath}}/questionpaper/types/:id",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"questionpaper",
+								"types",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Question Papers",
+			"item": [
+				{
+					"name": "addQuesPaper",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question_paper_type_id\": 9,\r\n\t\"title\": \"TRBd2fd25\",\r\n    \"active\": 1,\r\n    \"paper_code\": \"909\",\r\n    \"month\": \"nov\",\r\n\t\"year\": \"2021\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/question/papers",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"question",
+								"papers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "questionPapers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiEnvPath}}/question/papers",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"question",
+								"papers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getQuestionPaper",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiEnvPath}}/question/paper/:id",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"question",
+								"paper",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateQuesPapers",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question_paper_type_id\": 8,\r\n\t\"title\": \"First Time\",\r\n    \"active\": 1,\r\n    \"paper_code\": \"901\",\r\n    \"month\": \"nov\",\r\n\t\"year\": \"2021\",\r\n    \"createdBy\": \"-1\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/question/papers/:id",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"question",
+								"papers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delQuesPaper",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{apiEnvPath}}/question/papers/:id",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"question",
+								"papers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Previous Questions",
+			"item": [
+				{
+					"name": "addPrevQuestions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "     {\r\n      \"question_paper_id\": 10,\r\n      \"topic_id\": 0,\r\n      \"question\": \"Test Prev Qdudes2d\",\r\n      \"correct_options\": 4,\r\n      \"solution\": \"Ques2ddd ans\",\r\n      \"marks\": 10,\r\n      \"difficult_level\": \"hard\",\r\n      \"taxonomy\": \"Test\",\r\n      \"idx\": 0\r\n     }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/previous/questions",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"previous",
+								"questions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPrevQuestions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/previous/questions",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"previous",
+								"questions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiEnvPath}}/previous/question/:id",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"previous",
+								"question",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePrevQuestions",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "     {\r\n      \"question_paper_id\": 2,\r\n      \"topic_id\": 0,\r\n      \"question\": \"TRR\",\r\n      \"correct_options\": 4,\r\n      \"solution\": \"Ques2 ans\",\r\n      \"marks\": 10,\r\n      \"difficult_level\": \"Easy\",\r\n      \"taxonomy\": \"Test\",\r\n      \"idx\": 0\r\n     }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/previous/question/:id",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"previous",
+								"question",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delPrevQuestions",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{apiEnvPath}}/previous/questions/:id",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"previous",
+								"questions",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Previous Options",
+			"item": [
+				{
+					"name": "getPrevOptions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiEnvPath}}/previous/options",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"previous",
+								"options"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addPrevOptions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"question_id\": 7,\r\n      \"key\": \"SKey\",\r\n      \"value\": \"SVal\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/previous/options",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"previous",
+								"options"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"question_id\": 7,\r\n      \"key\": \"s1\",\r\n      \"value\": \"s1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiEnvPath}}/previous/options/:id",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"previous",
+								"options",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPrevOption",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiEnvPath}}/previous/options/:id",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"previous",
+								"options",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delPrevOption",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{apiEnvPath}}/previous/options/:id",
+							"host": [
+								"{{apiEnvPath}}"
+							],
+							"path": [
+								"previous",
+								"options",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
